@@ -48,8 +48,28 @@ with the ``beeware-venv`` virtual environment activated, and run:
         want to know more, `Brett Cannon has a detailed blog post about the issue
         <https://snarky.ca/why-you-should-use-python-m-pip/>`__.
 
-One of the BeeWare tools is **Briefcase**. Briefcase can be used to package
-your application for distribution to end users - but it can also be used to
+.. admonition:: Invalid requirements or pip unable to connect
+
+
+    You may encounter an error that reads:
+
+
+    ``Unable to install requirements. This may be because one of your
+    requirements is invalid, or because pip was unable to connect
+    to the PyPI server.``
+
+
+    This is likely due to the use of an incompatible version of python (ie 3.13). To rectify this:
+      Go to file manager and delete the venv and helloworld folder as that likely won’t work with the environment’s python version.
+      To fix the version discrepancy, either:
+        Delete the incompatible python version (not advised)
+        Specify the version of python to run the virtual environment in. Example:
+          “py -3.12 -m venv beeware-venv” specifies to use python 3.12.
+      Repeat the earlier steps.
+
+
+
+One of the BeeWare tools is **Briefcase**. Briefcase can be used to packageyour application for distribution to end users - but it can also be used to
 bootstrap a new project.
 
 Bootstrap a new project
@@ -218,6 +238,24 @@ This should open a GUI window:
     .. image:: images/windows/tutorial-1.png
        :align: center
        :alt: Hello World Tutorial 1 window, on Windows
+
+       .. admonition:: Invalid requirements or pip unable to connect
+
+          You may encounter an error that reads:
+
+
+          ``Unable to install requirements. This may be because one of your
+          requirements is invalid, or because pip was unable to connect
+          to the PyPI server.``
+
+          This is likely due to the use of an incompatible version of python (ie 3.13). To rectify this:
+            - Go to file manager and delete the venv and helloworld folder as that likely won’t work with the environment’s python version.
+            - To fix the version discrepancy, either:
+              - Delete the incompatible python version (not advised)
+              - Specify the version of python to run the virtual environment in. Example:
+                - “py -3.12 -m venv beeware-venv” specifies to use python 3.12.
+            - Repeat the earlier steps.
+
 
 Press the close button (or select Quit from the application's menu), and you're
 done! Congratulations - you've just written a standalone, native application
